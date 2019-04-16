@@ -1,38 +1,12 @@
 # RatingEngine
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+This is a movie rating engine. One can rate favourite movies and TV shows, and also can search through the movie database by it's title, actors, keywords related to description, year of release, number of rate stars, how old that movie is, ... and can see the most popular movies/TV shows list ordered by popularity.  
+
+The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Installing Bootstrap
-
-Next, we need to install Bootstrap. Change the directory to the project created and execute the command:
-
-`npm install bootstrap`
-
-Import  next line into src/style.css file:
-
-`@import '~bootstrap/dist/css/bootstrap.min.css';`
-
-## Installing ng-bootstrap
-
-After installing the bootstrap install ng-bootstrap:
-
-`npm install --save @ng-bootstrap/ng-bootstrap`
-
-Import ng-bootstrap main module:
-
-`import {NgbModule} from '@ng-bootstrap/ng-bootstrap';`
-
-Add module into imports array: 
-
-@NgModule({
-  ...
-  imports: [NgbModule, ...],
-  ...
-})
 
 ## Code scaffolding
 

@@ -21,6 +21,7 @@ ngb-rating {
 
 .btn-outline-danger {
   font-size: 0.7rem;
+  margin-left: 0.5em;
 }
 
 .btn-outline-danger:hover {
