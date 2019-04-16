@@ -1,0 +1,25 @@
+
+<div class="container">
+    <h4>Rate Your Favourite {{searchType?"Movies":"TV Shows"}}</h4>
+
+    <div class="row"> 
+      <button class="btn btn-primary" (click) = "toggleSearch()">Rate {{searchType?"Tv Shows":"Movies"}}</button>
+    </div> 
+
+    <div id="headings" class="row">
+      <div class="col-sm-6">
+          {{searchType?"Movie":"TV Show"}} Title
+      </div>
+      <div class="col-sm-3">
+        Your rating
+      </div>
+      <div class="col-sm-3">
+        Average rating
+      </div>
+    </div>
+    <hr>
+    
+    <app-movie *ngFor="let movie of sortedMovies()" [movie]="movie" [type]="searchType"></app-movie>
+</div>
+
+

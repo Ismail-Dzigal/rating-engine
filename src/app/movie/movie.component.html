@@ -1,0 +1,19 @@
+<div *ngIf="showAnswers()">
+    <div class="row">
+        <div class="col-sm-1">
+            <img class="movie-image" src="{{movie.Image}}">
+        </div>
+        <div class="col-sm-5">
+          {{movie.Title}}
+        </div>
+        <div class="col-sm-3">
+          <app-stars (updateRating)="getRating($event)"></app-stars>
+        </div>
+        <div class="col-sm-3">
+          <app-hearts [currentRate]="movie.Rating"></app-hearts>
+        </div>
+      </div>
+      <hr>
+</div>
+
+

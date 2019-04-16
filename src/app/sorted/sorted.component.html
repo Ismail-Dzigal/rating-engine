@@ -1,0 +1,30 @@
+<div class="row">
+  <input type="text" class="form-control" id="search" placeholder="Search Movies/Shows" [(ngModel)]="searchInput">
+</div>
+<div class="row"> 
+  <button class="btn btn-primary" (click) = "toggleSearch()">Search {{searchType?"Tv Shows":"Movies"}}</button>
+</div> 
+<hr>
+
+<div class="container-fluid" *ngFor="let movie of filteredMovies | slice:0: expand | filter : searchInput; let i = index">
+  <div class="row justify-content-center">
+    <div class="col-sm-3">
+      <img class="movie-image" src="{{movie.Image}}">
+    </div>
+    <div class="col-sm-6">
+      <h4>Title: {{movie.Title}}</h4>
+      <p><em>Description:</em> {{movie.Description}}</p>
+      <P><em>Cast:</em> {{movie.Cast}}</P>
+      <P><em>Released:</em> {{movie.Released}}</P>
+    </div>
+    <div class="col-sm-3">
+      <app-hearts [currentRate]="movie.Rating"></app-hearts>
+    </div>
+  </div>
+  <hr>
+</div>
+<div class="row">
+  <div class="col-sm-3">
+    <button class="btn btn-primary btn-sm" [disabled]="disabledButton" (click)="showMore()">View more results</button>
+  </div>
+</div>
