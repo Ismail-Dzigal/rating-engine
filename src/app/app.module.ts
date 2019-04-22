@@ -13,6 +13,9 @@ import { StartComponent } from './start/start.component';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
 
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+
 const routes: Routes = [
   { path: 'sorted', component: SortedComponent },
   { path: 'rate', component: ListComponent },
@@ -36,7 +39,8 @@ const routes: Routes = [
     BrowserModule,
     NgbModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]

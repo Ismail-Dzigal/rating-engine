@@ -1,6 +1,8 @@
 # RatingEngine
 
-This is a movie rating engine. One can rate favourite movies and TV shows, and also can search through the movie database by it's title, actors, keywords related to description, year of release, number of rate stars, how old that movie is, ... and can see the most popular movies/TV shows list ordered by popularity.  
+This is a movie rating engine. One can rate favorite movies and TV shows, and also can search through the movie database by it's title, actors, keywords related to the description, the year of release, the number of rate stars, how old that movie is, ... and can see the most popular movies/TV shows list ordered by popularity.  
+
+Link to see application in action: https://movie-rating-d0359.firebaseapp.com
 
 The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 

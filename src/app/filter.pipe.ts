@@ -8,20 +8,20 @@ export class FilterPipe implements PipeTransform {
   transform(items: any[], searchInput: string): any[] {
     if(!items) return [];
     if(!searchInput || searchInput.length < 2) return items;
-    var re1 = new RegExp("^(at least [1-5] stars+$)");
-    var re2 = new RegExp("^(at most [1-5] stars+$)");
-    var re3 = new RegExp("^([1-5] stars+$)");
-    var re4 = new RegExp("^(after [1-2][0-9][0-9][0-9]+$)");
-    var re5 = new RegExp("^(before [1-2][0-9][0-9][0-9]+$)");
-    var re6 = new RegExp("^(older than [0-9] years+$)");
-    var re7 = new RegExp("^(older than [0-9][0-9] years+$)");
+    let re1 = new RegExp("^(at least [1-5] stars+$)");
+    let re2 = new RegExp("^(at most [1-5] stars+$)");
+    let re3 = new RegExp("^([1-5] stars+$)");
+    let re4 = new RegExp("^(after [1-2][0-9][0-9][0-9]+$)");
+    let re5 = new RegExp("^(before [1-2][0-9][0-9][0-9]+$)");
+    let re6 = new RegExp("^(older than [0-9] years+$)");
+    let re7 = new RegExp("^(older than [0-9][0-9] years+$)");
 
     let regex = /[+-]?\d+(?:\.\d+)?/g;
     let match = regex.exec(searchInput);
     let numStar1 = 6;
     let numStar2 = 0;
   
-    let numReleased1 = 2030;
+    let numReleased1 = new Date().getFullYear() + 1;
     let numReleased2 = 1900;
     let numReleased3 = 1900;
 

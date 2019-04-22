@@ -13,6 +13,7 @@ export class SortedComponent implements OnInit {
   filteredMovies: Movie[];
   expand: number = 10;
   disabledButton: boolean = false;
+  searchInput: string;
 
   constructor(private dataService:DataService) { }
 
